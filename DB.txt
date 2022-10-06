@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host2.example.com
+	ServerName webapp.local
+    DocumentRoot "D:\webapp\public"
+    ErrorLog "logs/dummy-host2.example.com-error.log"
+    CustomLog "logs/dummy-host2.example.com-access.log" common
+	
+	<Directory "D:\webapp\public">
+		Options Indexes FollowSymlinks Includes ExecCGI
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
